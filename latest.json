@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "url": "https://github.com/pfnunes15/admedia-cms-releases/blob/main/CHANGELOG.md",
-  "notes": "Loja: catálogo, portes por escalões e pagamentos preparados para outros fornecedores. Menus por página."
+  "notes": "IVA tirado de dentro dos preços, reserva de stock durante o pagamento, e as categorias da loja no lado público."
 }
