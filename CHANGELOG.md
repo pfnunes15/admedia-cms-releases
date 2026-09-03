@@ -3,6 +3,42 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.3.0
+
+Aditivo. Nada do que existia mudou de forma, e a versão instala-se por cima.
+
+- **A loja inteira passa a ser do pacote.** Faltava metade dela: o cesto, o
+  checkout, o aviso de pagamento, o modelo da encomenda e o backoffice de
+  produtos e encomendas viviam dentro de um dos sites. O segundo site a vender
+  obrigava a copiá-los, e a partir daí eram duas lojas a divergir. Montam-se
+  agora em três chamadas — `Shop::routes()`, `Shop::adminRoutes()` e
+  `Shop::callbackRoutes()` —, e a ordem por que se registam deixa de ser
+  conhecimento de cada projecto.
+- **Os endereços da loja são de cada site.** `/loja` e `/carrinho` estavam
+  escritos dentro do controlador, o que fazia dele um controlador português.
+  Declaram-se em `config/shop.php`; o que não for declarado fica em inglês, que
+  é o que o pacote traz. A assinatura das encomendas — o `QM-` de
+  `QM-2026-0007` — passa pelo mesmo sítio.
+- **Um catálogo de frases.** O que o CMS diz ao visitante sai dos controladores
+  para `lang/{código}.php`, o do pacote com o do site por cima, e pede-se por
+  `__('shop.cart.empty')`. Um site muda uma linha escrevendo só essa linha. Sem
+  isto, subir a loja para o pacote era dar português a quem não o fala.
+- **A confirmação da encomenda vai na língua em que foi comprada.** A coluna
+  `locale` já estava gravada e nunca tinha sido lida.
+- **Nav, Booking, Phone e Colour** — e a lista de redes sociais — sobem também.
+  Nenhum deles sabia nada do site onde estava.
+
+Duas correcções:
+
+- o aviso de pagamento importava `Admedia\Core\Mailer`, uma classe que deixou
+  de existir quando o correio passou a serviço. Como o envio apanha
+  `\Throwable`, o erro fatal era engolido em silêncio e **a confirmação de uma
+  encomenda paga nunca chegava a sair**. Quem tiver a loja a funcionar deve
+  actualizar por causa disto e mais nada;
+- a barra do backoffice mostrava «Produtos» e «Encomendas» em sites sem loja, a
+  apontar para rotas que ninguém registou. Passa a depender do site ter loja, e
+  ganha o catálogo e os portes, que faltavam.
+
 ## 2.2.0
 
 Aditivo: nada do que existia mudou de forma.
