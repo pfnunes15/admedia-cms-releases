@@ -16,9 +16,15 @@ não a uma lista de versões.
 
 Por esta ordem, que importa:
 
-1. Subir o `Version::CURRENT` no pacote.
-2. Publicar a versão no repositório do CMS (etiqueta ou zip).
-3. Só depois, actualizar o `latest.json` aqui e escrever o `CHANGELOG.md`.
+1. **Correr os sites todos**: `php bin/verifica-sites.php`, no repositório do
+   pacote. Os sites instalam-no por symlink e saltam para a versão nova no
+   instante em que ele muda — não há `composer update` a servir de porta, e um
+   site que ninguém abra é um site onde a regressão só aparece quando o cliente
+   lá for.
+2. Subir o `Version::CURRENT` no pacote.
+3. Publicar a versão no repositório do CMS (etiqueta ou zip).
+4. Só depois, actualizar o `latest.json` aqui e escrever o `CHANGELOG.md`.
 
-Ao contrário, os sites anunciam durante uns minutos uma versão que ainda não
-existe para descarregar.
+Ao contrário nos dois últimos, os sites anunciam durante uns minutos uma versão
+que ainda não existe para descarregar. Sem o primeiro, anunciam uma que existe
+e os parte.
