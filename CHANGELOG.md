@@ -3,6 +3,19 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.3.1
+
+Só o backoffice, e só à vista. Nada mudou de forma; instala-se por cima.
+
+- **As gavetas «Definições avançadas» abrem e fecham com movimento.** Um
+  `<details>` abre de repente: o conteúdo aparece todo de uma vez e a página dá
+  um salto por baixo dele — e quem carregou fica sem saber de onde veio aquilo.
+  Agora a caixa cresce da altura fechada até à aberta, em pouco mais de um
+  quarto de segundo, e encolhe pelo mesmo caminho. A seta ao lado do título
+  roda em vez de trocar de desenho.
+- Quem tiver pedido ao sistema para não haver movimento continua a ter a gaveta
+  a abrir de uma vez, como antes.
+
 ## 2.3.0
 
 Aditivo. Nada do que existia mudou de forma, e a versão instala-se por cima.

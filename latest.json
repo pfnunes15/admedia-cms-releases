@@ -1,5 +1,5 @@
 {
-  "version": "2.3.0",
+  "version": "2.3.1",
   "url": "https://github.com/pfnunes15/admedia-cms-releases/blob/main/CHANGELOG.md",
-  "notes": "A loja inteira passa a ser do pacote, com endereços por site e as frases num catálogo de línguas."
+  "notes": "As gavetas «Definições avançadas» do backoffice abrem e fecham com movimento."
 }
