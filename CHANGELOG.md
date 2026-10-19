@@ -3,6 +3,31 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.32.0
+
+**Variantes.** O mesmo produto em tamanhos, cores ou formatos, cada um com o
+seu stock e, se quiser, o seu preço — vazio quer dizer «o do produto». Não
+confundir com os atributos que já havia («Volume», «Castas»), que são texto
+que o visitante lê; uma variante não se lê, escolhe-se.
+
+O stock é contado **por variante**: duas pessoas a comprar o último M não
+podem levar as duas. A encomenda guarda qual foi, pelo nome também, porque
+uma variante pode ser apagada e uma encomenda de há um ano tem de continuar
+a dizer o que saiu do armazém.
+
+Um produto sem variantes nenhumas vende-se exactamente como antes.
+
+**Isenção de IVA para empresas da UE.** Uma empresa de outro estado-membro
+com número de IVA liquida o imposto do lado dela. Desligado salvo se a loja
+o ligar: numa loja ao público, ligar isto é deixar de cobrar imposto que se
+continua a dever.
+
+O número **não** é verificado no VIES. É uma decisão e não um esquecimento:
+verificá-lo é uma chamada a um serviço externo que está muitas vezes em
+baixo, e um checkout que falha porque o servidor de outra pessoa está a ter
+uma tarde má é pior do que um número anotado. Fica registado na encomenda
+para quem vende confirmar — que é o que a lei lhe pede de qualquer maneira.
+
 ## 2.30.0 e 2.31.0
 
 **A loja ganha descontos**, e os quatro tipos são um mecanismo só, porque

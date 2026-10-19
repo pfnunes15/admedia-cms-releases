@@ -1,5 +1,5 @@
 {
-  "version": "2.31.0",
+  "version": "2.32.0",
   "url": "https://github.com/pfnunes15/admedia-cms-releases/blob/main/CHANGELOG.md",
-  "notes": "A loja ganha promoções, campanhas entre datas, cupões de desconto e descontos a partir de um valor de compra — tudo no mesmo sítio e com as mesmas regras. O IVA passa a poder escrever-se por região, e escolhe-se se o preço se mostra com o imposto incluído ou à parte."
+  "notes": "Um produto pode vender-se em tamanhos, cores ou formatos, cada um com o seu stock e o seu preço. E uma empresa de outro país da UE com número de IVA pode ficar isenta de imposto — desligado por omissão."
 }
