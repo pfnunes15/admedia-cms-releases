@@ -1,5 +1,5 @@
 {
-  "version": "2.28.0",
+  "version": "2.29.0",
   "url": "https://github.com/pfnunes15/admedia-cms-releases/blob/main/CHANGELOG.md",
-  "notes": "O editor de páginas passa a ser a página: desenha-se a arrastar blocos e escreve-se directamente em cima. Datas, horas e ficheiros têm sempre o selector próprio. As secções longas do backoffice passam a abas. E a loja instala-se por um botão, em Definições › Funcionalidades."
+  "notes": "O CMS passa a actualizar-se pelo próprio backoffice, em Definições › O CMS: envia-se o pacote da versão e ele instala-se, sem FTP e sem linha de comandos. O site nunca vai buscar código à internet — é quem está autenticado que manda o ficheiro."
 }

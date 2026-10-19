@@ -3,6 +3,32 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.29.0
+
+**O CMS passa a actualizar-se pelo próprio backoffice.** Em
+**Definições › O CMS**: envia-se o `.zip` da versão e ele instala-se — sem
+FTP, e sem linha de comandos para as migrações.
+
+O ficheiro é **enviado por quem está autenticado** e não descarregado pelo
+site. Um site que vai buscar código à internet por sua conta é um site que
+qualquer pessoa que consiga responder por esse endereço passa a poder
+reescrever; e ir buscá-lo ao repositório do CMS, que é privado, obrigaria a
+ter uma senha de leitura do código-fonte todo no `config` de cada site.
+
+Recusa-se, **sem escrever nada**: um ficheiro que não seja este pacote, um que
+traga uma versão mais antiga do que a instalada, um de número maior diferente,
+e um que leve caminhos para fora da pasta dele.
+
+A versão anterior fica guardada em `vendor/admedia/cms.previous`. Se alguma
+coisa estiver errada, troca-se o nome das duas pastas e o site volta ao que
+era.
+
+A instalação é em dois passos — os ficheiros primeiro, as migrações e os
+ficheiros do backoffice a seguir — porque entre um e outro o PHP está a correr
+metade de cada versão. Quem fechar o separador a meio encontra o ecrã a dizer
+o que falta quando voltar: isso é lido do disco e da base de dados, e não de
+uma marca na sessão.
+
 ## 2.4.0 – 2.28.0
 
 **Este ficheiro esteve vinte e cinco versões sem ser escrito.** O `latest.json`
