@@ -3,6 +3,110 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.4.0 – 2.28.0
+
+**Este ficheiro esteve vinte e cinco versões sem ser escrito.** O `latest.json`
+ficou na 2.3.1 enquanto o pacote chegava à 2.28.0, e por isso o «Verificar
+agora» do painel respondeu «está actualizado» a toda a gente durante esse
+tempo — com confiança, e sem nada que o denunciasse. Está dito aqui porque um
+aviso que mente é pior do que não haver aviso, e porque a ordem de publicar
+que está no README existe precisamente para isto e não foi seguida.
+
+As versões vão agrupadas pelo que mudam, e não uma a uma: vinte e cinco
+secções seriam um registo que ninguém lê. Nada no meio disto obriga a mexer
+num site — todas se instalam por cima.
+
+### O editor de páginas passou a ser a página
+
+Era uma lista de blocos com os nomes por baixo, e quem montava uma página não
+conseguia ver o que estava a montar.
+
+- A página é desenhada inteira, cada bloco com o conteúdo real e o desenho do
+  site, uns encostados aos outros como ficam lá fora.
+- Os blocos arrastam-se para a página a partir de uma coluna à direita, e
+  abre-se um espaço no sítio onde vão cair antes de se largar.
+- **Escreve-se directamente na página.** Carrega-se num título e muda-se ali;
+  guarda-se sozinho quando o cursor sai. Um campo que o desenho do site parta
+  ao meio antes de o imprimir continua a editar-se no formulário, de
+  propósito: mais vale não deixar editar do que guardar um quarto de um
+  título.
+- O nome, a descrição e a estrutura da página desceram para baixo da folha,
+  em abas.
+
+### Achar uma coisa entre muitas
+
+- A lista de páginas procura por nome e por endereço, filtra por estado, e
+  **agrupa pela zona do site** — num site com uma página por vinho, isso é
+  «Os nossos vinhos 66» ao lado de «11 fora destas». O agrupamento sai do
+  endereço, sem ninguém ter de etiquetar nada.
+- O cabeçalho das tabelas acompanha quem faz scroll.
+- O selector de blocos ganhou procura e títulos: trinta e quatro blocos
+  deixaram de ser uma parede.
+- Os utilizadores também procuram e filtram, com a mesma forma e as mesmas
+  palavras — dois ecrãs iguais são uma coisa para aprender e não duas.
+
+### Os campos escrevem-se sempre da mesma maneira
+
+- Uma data é sempre um calendário e uma hora é sempre um relógio. Uma caixa
+  onde se escreve uma data é uma caixa onde 3/5 é Março para uns e Maio para
+  outros.
+- Um ficheiro é sempre um botão de carregar, nunca um caminho escrito à mão.
+  Isso vale para fotografias e passou a valer para documentos — uma ementa em
+  PDF, uma lista de preços.
+- O texto formatado abre o editor em todo o lado. Havia dois sítios onde a
+  caixa dizia ser um editor e não era: ficavam a HTML em cru.
+
+### As secções longas passaram a abas
+
+Um só componente em todo o backoffice: as definições, o editor de um bloco, o
+editor de uma página, as visitas. A aba escolhida fica no endereço — dá para
+mandar uma ligação para a parte que interessa — e é lembrada, para que gravar
+não devolva ninguém ao princípio.
+
+### Funcionalidades: a loja instala-se por um botão
+
+Em **Definições › Funcionalidades**. Um site sem loja só ganhava uma se
+alguém lhe pusesse um ficheiro por FTP e corresse as migrações numa linha de
+comandos que o alojamento partilhado não tem.
+
+Desligar muda o nome ao ficheiro e **não apaga tabela nenhuma**: uma loja que
+recebeu uma encomenda guarda essa encomenda, o cliente e o dinheiro cobrado.
+Voltar a ligar repõe a configuração que o site tinha.
+
+### A loja, as línguas e o correio
+
+- **Contas de cliente**, com porta própria e sessão separada da do pessoal.
+  Um cliente e um funcionário podem estar os dois com sessão aberta no mesmo
+  navegador sem se confundirem.
+- As páginas de erro e o selector de língua deixaram de estar em português
+  fixo, e o `hreflang` deixou de anunciar traduções que não existem.
+- **O correio que o CMS envia sobrevive à viagem.** Ia em 8-bit sem o
+  declarar, o que dá a qualquer servidor pelo caminho o direito de lhe cortar
+  os acentos, e com linhas acima do que a norma permite, que o mesmo servidor
+  pode partir a meio de uma etiqueta. E o «Responder» de um pedido de
+  contacto passa a chegar a quem o escreveu.
+
+### O que um site pode declarar por si
+
+Sem forçar nada em quem não declarar nada:
+
+- as entradas que acrescenta à barra lateral (`config/admin-nav.php`);
+- as folhas de estilo dos ecrãs que traz de seu (`config/admin.php`);
+- as folhas que o editor usa para desenhar um bloco (`config/preview.php`) —
+  sem isto o editor adivinhava três nomes e desenhava a página sem estilo
+  nenhum nos sites onde não acertava;
+- de onde aceita ser posto dentro de um frame.
+
+### Correcções que vale a pena nomear
+
+- **O backoffice esteve sem uma única linha de contorno** e ninguém percebia
+  porquê: três cores dependiam de uma variável que nunca foi definida.
+- **O atributo `hidden` não escondia**, por causa de uma regra de `display`
+  que lhe ganhava — e por isso a procura no selector de blocos não filtrava
+  nada.
+- `bin/cms-publish.php`, que copia os ficheiros do backoffice para o site. O
+  README já mandava corrê-lo e o ficheiro não existia.
+
 ## 2.3.1
 
 Só o backoffice, e só à vista. Nada mudou de forma; instala-se por cima.
