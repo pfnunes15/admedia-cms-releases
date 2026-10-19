@@ -1,5 +1,5 @@
 {
-  "version": "2.32.0",
+  "version": "2.33.0",
   "url": "https://github.com/pfnunes15/admedia-cms-releases/blob/main/CHANGELOG.md",
-  "notes": "Um produto pode vender-se em tamanhos, cores ou formatos, cada um com o seu stock e o seu preço. E uma empresa de outro país da UE com número de IVA pode ficar isenta de imposto — desligado por omissão."
+  "notes": "A tela do editor de páginas voltou a desenhar os blocos em vez do site inteiro nos sites a que faltava uma rota, e o verificador passa a apanhar esse tipo de falha antes de ela chegar a alguém. O backoffice mostra o ícone do site no separador."
 }

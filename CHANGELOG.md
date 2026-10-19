@@ -3,6 +3,23 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.33.0
+
+Um ensaio da actualização de um site em produção, feito sobre uma cópia da
+base de dados real, mostrou que **cinco dos seis sites nunca tiveram a rota
+que a tela do editor de páginas usa** para desenhar cada bloco. Sem ela, os
+quadros caíam no apanha-tudo e cada bloco aparecia como o site inteiro, com
+cabeçalho e aviso de cookies. Corrigido em todos.
+
+O verificador passa a exigir que os endereços que as vistas do backoffice
+escrevem estejam mesmo registados. Desenhar uma vista nunca provou que o
+endereço por trás dela existia — e foi assim que isto passou despercebido
+durante uma dúzia de versões. À primeira passagem apanhou logo um segundo
+caso.
+
+O backoffice mostra o ícone do site no separador do navegador. Quem lá
+trabalha tem quase sempre o site aberto ao lado.
+
 ## 2.32.0
 
 **Variantes.** O mesmo produto em tamanhos, cores ou formatos, cada um com o
