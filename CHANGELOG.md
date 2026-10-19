@@ -3,6 +3,39 @@
 O que cada versão trouxe. Os sites lêem o `latest.json` ao lado deste
 ficheiro e avisam no painel quando há uma mais nova do que a instalada.
 
+## 2.30.0 e 2.31.0
+
+**A loja ganha descontos**, e os quatro tipos são um mecanismo só, porque
+são a mesma pergunta — *o que muda este preço, e quando*.
+
+- **Promoções**: menos 20% nos vinhos, menos 5 € numa categoria, em tudo ou
+  num produto. Uma promoção numa categoria apanha o que está por baixo dela.
+- **Campanhas**: a mesma coisa com datas. Começa e acaba sozinha.
+- **Cupões**: um código, com validade, limite de usos e limite por pessoa.
+  Cada recusa diz qual é — expirado não é o mesmo que não existe, nem que já
+  o usou, nem que o cesto é pequeno de mais.
+- **Descontos a partir de um valor**: «menos 10% acima de 50 €», ou portes
+  grátis, sem código nenhum.
+
+Duas promoções sobre o mesmo produto **não somam** por omissão: vale a que
+desconta mais. Somar é uma caixa que se marca, porque duas de 20% a somarem
+dão 36%.
+
+Tudo o que mostra ou cobra um preço passa pelo mesmo código — a montra, o
+carrinho, o checkout e o que vai para o pagamento. Um desconto visto na
+prateleira e não cobrado no cesto é o pior erro que uma loja pode ter.
+
+**O IVA** passa a poder escrever-se por país e por início de código postal,
+o que separa a Madeira do continente sem haver um país para ela; ganha
+sempre a regra mais específica. E segue o que é realmente pago: um desconto
+no total leva com ele a parte dele de imposto, repartida pelas linhas,
+porque as taxas diferem.
+
+**Como o preço se mostra** passa a ser uma escolha nas Definições: só o
+preço, o preço com o imposto discriminado por baixo, ou o valor sem imposto
+e o imposto à parte. O preço guardado inclui sempre o IVA — é o que a lei
+obriga a mostrar e é o que é cobrado; muda só o que se lê ao lado.
+
 ## 2.29.0
 
 **O CMS passa a actualizar-se pelo próprio backoffice.** Em
